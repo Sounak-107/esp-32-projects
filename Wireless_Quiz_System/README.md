@@ -1,15 +1,18 @@
-This repository is about a Wireless Quize Buzzer System
-Containts
+# Wireless Quiz Buzzer System
+
+This repository is about a Wireless Quiz Buzzer System
+
+Contains
 
 1. Hardware used
-2. Software Used
+2. Software used
 3. Methods
-4. Challeneges faced
-5. Wiring Configurations.
+4. Challenges faced
+5. Wiring configurations
 
-6. HARDWARE USED :
+6. Hardware used:
 
-   a. Esp-32 : The main processing unit
-   ![Esp-32](image.png)
+   a. ESP32: The main processing unit
+   ![ESP32](image.png)
 
    b.

@@ -1,4 +1,4 @@
-import machine
+import machine  # type: ignore[import]
 import time
 
 # Pin configuration
@@ -34,13 +34,13 @@ def map_range(x, in_min, in_max, out_min, out_max):
 while True:
     dist = get_distance()
 
-    if dist:
+    if dist is not None:
         print("Distance: {:.2f} cm".format(dist))
 
         # Clamp distance to a useful range, say 5 to 200 cm
         dist = max(5, min(200, dist))
 
-        # Map 5–50 cm to 1023–0 brightness (closer = brighter)
+        # Map 5–200 cm to 1023–0 brightness (closer = brighter)
         brightness = map_range(dist, 5, 200, 1023, 0)
         led.duty(brightness)
 
