@@ -8,14 +8,22 @@ This project is a low-latency, localized Machine-to-Machine (M2M) quiz buzzer sy
 
 ## Bill of Materials (Hardware)
 
-* ESP32 Development Board ![ESP32 development board](images/Esp32.png)
-* AG-RXB6 433MHz Superheterodyne Receiver ![AG-RXB6 433MHz superheterodyne receiver module](images/RF_Module.png)
-* 8x EV1527 4-Button RF Remotes (Operating at 433MHz) ![EV1527 4-button 433MHz RF remote](images/Remote.png)
-* 0.96 inch 128 x 64 I2C OLED Display Module ![0.96 inch 128x64 I2C OLED display module](images/Display.png)
-* 3V Passive Buzzer ![3V passive buzzer](images/Buzzer.png)
-* Analog Joystick Module ![analog joystick module](images/Joystick.png)
-* 5V USB Power Bank Module ![5V USB power bank module](images/Power_bank.png)
-* 1x 18650 Li-ion Battery ![18650 Li-ion battery](images/Battery.png)
+* ESP32 Development Board
+![ESP32 development board](images/Esp32.png)
+* AG-RXB6 433MHz Superheterodyne Receiver
+![AG-RXB6 433MHz superheterodyne receiver module](images/RF_Module.png)
+* 8x EV1527 4-Button RF Remotes (Operating at 433MHz)
+![EV1527 4-button 433MHz RF remote](images/Remote.png)
+* 0.96 inch 128 x 64 I2C OLED Display Module
+![0.96 inch 128x64 I2C OLED display module](images/Display.png)
+* 3V Passive Buzzer
+![3V passive buzzer](images/Buzzer.png)
+* Analog Joystick Module
+![analog joystick module](images/Joystick.png)
+* 5V USB Power Bank Module
+![5V USB power bank module](images/Power_bank.png)
+* 1x 18650 Li-ion Battery
+![18650 Li-ion battery](images/Battery.png)
 
 ---
 
@@ -81,6 +89,6 @@ if match_count == 2:
 
 * Power the system via the 5V VIN pin using a stable power bank.
 
-* Use the onboard joystick to navigate the OLED menu and select "Rapid Fire"   or "Tie-Breaker" mode.
+* Use the onboard joystick to navigate the OLED menu and select "Rapid Fire" or "Tie-Breaker" mode.
 
-* Player presses are logged instantly on the display, locking out subsequent   presses based on the active game mode rules.
+* Player presses are logged instantly on the display, locking out subsequent presses based on the active game mode rules.
