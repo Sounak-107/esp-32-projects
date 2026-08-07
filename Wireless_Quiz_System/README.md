@@ -92,3 +92,7 @@ if match_count == 2:
 * Use the onboard joystick to navigate the OLED menu and select "Rapid Fire" or "Tie-Breaker" mode.
 
 * Player presses are logged instantly on the display, locking out subsequent presses based on the active game mode rules.
+
+## Acknowledgments
+
+* **OLED Driver:** This project utilizes the standard MicroPython `ssd1306.py` library originally developed by Adafruit Industries and the MicroPython community.
