@@ -34,7 +34,7 @@ To eliminate radio frequency interference and "Ground Bounce" on the breadboard,
 | **Joystick** | VCC | 3V3 Rail |
 | **Joystick** | VRX | Pin 34 |
 | **Joystick** | VRY | Pin 35 |
-| **joystick** | SW | Pin 32 |
+| **Joystick** | SW | Pin 32 |
 | **Buzzer** | VCC | 3V3 Rail |
 | **Buzzer** | I/O | Pin 27 |
 
@@ -66,13 +66,13 @@ if match_count == 2:
 
 ## Engineering Challenges & Troubleshooting
 
-* Hardware Interference & Star Grounding
+* **Hardware Interference & Star Grounding**
   Initial prototypes experienced severe signal degradation (reading misaligned IDs). This was diagnosed as ground noise caused by the OLED and buzzer sharing the same ground rail as the RF receiver. Implementing a "Star Ground" topology (giving the RXB6 a dedicated wire back to the ESP32) stabilized the digital logic threshold.
 
-* EV1527 Voltage Starvation
+* **EV1527 Voltage Starvation**
   The EV1527 encoder chips inside the remotes require strict 12V power to maintain their oscillator timings. Dropped voltage from continuous button holds caused transmission pulses to stretch from 900us to 4000us, breaking the decoder math. This was resolved by migrating to momentary clicks and ensuring fresh 23A 12V alkaline batteries.
 
-* Logic Level Safety
+* **Logic Level Safety**
   The ESP32 uses strict 3.3V logic. During diagnostic testing, care was taken to route the 5V-powered RXB6 data output safely to the ESP32 GPIO pins, avoiding over-voltage damage to the microcontroller's internal logic gates.
 
 ## How to Run the System
