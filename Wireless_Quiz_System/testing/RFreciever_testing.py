@@ -8,12 +8,10 @@ print("Listening for a real remote!")
 
 while True:
     try:
-        # 1. Look for a LOW (0) pulse. 
-        # Wait a maximum of 20,000 microseconds (20ms) before giving up.
+        # Look for a LOW (0) pulse. 
+        # Wait a maximum of 20,000 microseconds (20ms) before giving up
         pulse_length = time_pulse_us(receiver, 0, 20000)
         
-        # 2. Random static pulses are usually very short (< 1000us).
-        # If we see a pulse longer than 5000us, it's almost certainly a remote!
         if pulse_length > 5000:
             print(">>> REMOTE BUTTON PRESSED! Sync Pulse:", pulse_length, "us")
             
