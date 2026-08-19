@@ -12,6 +12,8 @@ This project is a low-latency, localized Machine-to-Machine (M2M) quiz buzzer sy
 ![ESP32 development board](images/Esp32.png)
 * AG-RXB6 433MHz Superheterodyne Receiver
 ![AG-RXB6 433MHz superheterodyne receiver module](images/RF_Module.png)
+* 433 Mhz 2.5dbi Omnidirectional Folding Antenna
+![433 Mhz 2.5dbi Omnidirectional Folding Antenna](images/Antenna.png)
 * 8x EV1527 4-Button RF Remotes (Operating at 433MHz)
 ![EV1527 4-button 433MHz RF remote](images/Remote.png)
 * 0.96 inch 128 x 64 I2C OLED Display Module
