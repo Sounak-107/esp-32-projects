@@ -34,6 +34,7 @@ This project is a low-latency, localized Machine-to-Machine (M2M) quiz buzzer sy
 To eliminate radio frequency interference and "Ground Bounce" on the breadboard, this project utilizes a split power-rail architecture. The analog RF receiver is isolated on the 5V line with a dedicated ground, while digital peripherals run on the 3.3V line.
 
 | Component | Pin Connection | ESP32 Pin |
+| :--- | :--- | :--- |
 | **AG-RXB6 Receiver** | VCC | VIN (5V) |
 | **AG-RXB6 Receiver** | GND | GND Pin 1 (Dedicated) |
 | **AG-RXB6 Receiver** | DATA | Pin 26 |
@@ -48,6 +49,7 @@ To eliminate radio frequency interference and "Ground Bounce" on the breadboard,
 | **Buzzer** | I/O | Pin 27 |
 
 | Component | Pin Connection | Receiver Pin |
+| :--- | :--- | :--- |
 | **Antenna** | DATA | Receiver ANT |
 | **Antenna** | GND | Receiver GND |
 
