@@ -38,6 +38,8 @@ To eliminate radio frequency interference and "Ground Bounce" on the breadboard,
 | **AG-RXB6 Receiver** | VCC | VIN (5V) |
 | **AG-RXB6 Receiver** | GND | GND Pin 1 (Dedicated) |
 | **AG-RXB6 Receiver** | DATA | Pin 26 |
+| **Antenna** | DATA | Recievr ANT |
+| **Antenna** | GND | Reciver GND |
 | **OLED Display** | VCC | 3V3 Rail |
 | **OLED Display** | SDA | Pin 21 |
 | **OLED Display** | SCL | Pin 22 |
