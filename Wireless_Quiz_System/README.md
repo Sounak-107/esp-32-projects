@@ -8,6 +8,8 @@ This project is a low-latency, localized Machine-to-Machine (M2M) quiz buzzer sy
 
 ## Bill of Materials (Hardware)
 
+* Custom KiCad PCB (See `/Hardware/PCB`)
+* 3D Printed Enclosure (See `/Hardware/Enclosure`)
 * ESP32 Development Board
 ![ESP32 development board](images/Esp32.png)
 * AG-RXB6 433MHz Superheterodyne Receiver
@@ -33,6 +35,8 @@ This project is a low-latency, localized Machine-to-Machine (M2M) quiz buzzer sy
 
 To eliminate radio frequency interference and "Ground Bounce" on the breadboard, this project utilizes a split power-rail architecture. The analog RF receiver is isolated on the 5V line with a dedicated ground, while digital peripherals run on the 3.3V line.
 
+The `/Hardware/PCB` folder contains the full KiCad project, including schematics and ready-to-order Gerber files.
+
 | Component | Pin Connection | ESP32 Pin |
 | :--- | :--- | :--- |
 | **AG-RXB6 Receiver** | VCC | VIN (5V) |
@@ -52,6 +56,14 @@ To eliminate radio frequency interference and "Ground Bounce" on the breadboard,
 | :--- | :--- | :--- |
 | **Antenna** | DATA | Receiver ANT |
 | **Antenna** | GND | Receiver GND |
+
+---
+
+## 3D Printed Enclosure
+
+The base station is housed in a custom enclosure designed in FreeCAD. It features a panel-mount SMA connector for the folding 433MHz antenna and a precision cutout for the OLED screen and joystick.
+
+All source files (`.FCStd`) and slicing files (`.STL`) are available in the `/Hardware/Enclosure` folder.
 
 ---
 
@@ -90,6 +102,8 @@ if match_count == 2:
 * **Logic Level Safety**
   The ESP32 uses strict 3.3V logic. During diagnostic testing, care was taken to route the 5V-powered RXB6 data output safely to the ESP32 GPIO pins, avoiding over-voltage damage to the microcontroller's internal logic gates.
 
+---
+
 ## How to Run the System
 
 * Flash the ESP32 with the provided main.py and buttonconfigure.py files.
@@ -99,6 +113,8 @@ if match_count == 2:
 * Use the onboard joystick to navigate the OLED menu and select "Rapid Fire" or "Tie-Breaker" mode.
 
 * Player presses are logged instantly on the display, locking out subsequent presses based on the active game mode rules.
+
+---
 
 ## Acknowledgments
 

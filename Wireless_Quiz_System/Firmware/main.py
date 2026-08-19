@@ -1,6 +1,6 @@
-from machine import Pin, ADC, I2C, time_pulse_us , PWM
+from machine import Pin, ADC, I2C, time_pulse_us, PWM  # type: ignore[import-not-found]
 import time
-import ssd1306
+import ssd1306  # type: ignore[import-not-found]
 import example_button_configure  # The configuration file (must be edited to match the hardware)
 
 
@@ -211,8 +211,8 @@ while True:
                 
                 #print("DEBUG - The Remote ID is:", remote_id, " | The Button is:", button_val)
                 
-                team_name = buttonconfigure.teams.get(remote_id, "Unknown Team")
-                button_name = buttonconfigure.buttons.get(button_val, "Unknown")
+                team_name = example_button_configure.teams.get(remote_id, "Unknown Team")
+                button_name = example_button_configure.buttons.get(button_val, "Unknown")
                 
                 # RAPID FIRE LOGIC (First 3 unique teams) 
                 if state == "RAPID_FIRE":
