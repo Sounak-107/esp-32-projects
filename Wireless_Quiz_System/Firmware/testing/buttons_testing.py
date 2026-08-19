@@ -1,6 +1,6 @@
 from machine import Pin, time_pulse_us
 import time
-import buttonconfigure  # custom dictionaries!
+import example_button_configure  # custom dictionaries!
 
 receiver = Pin(27, Pin.IN)
 
@@ -26,10 +26,10 @@ while True:
             remote_id = raw_id >> 4
             button_val = raw_id & 15
             
-            # Look up the names in buttonconfigure file safely
+            # Look up the names in example_button_configure file safely
             # Using .get() prevents the code from crashing if an unknown remote is pressed
-            team_name = buttonconfigure.teams.get(remote_id, "Unknown Team")
-            button_name = buttonconfigure.buttons.get(button_val, "Unknown Button")
+            team_name = example_button_configure.teams.get(remote_id, "Unknown Team")
+            button_name = example_button_configure.buttons.get(button_val, "Unknown Button")
             
             # Print the final decoded result
             print(">>> SUCCESS:", team_name, "|", button_name)

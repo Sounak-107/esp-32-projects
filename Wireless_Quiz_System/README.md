@@ -41,7 +41,7 @@ The `/Hardware/PCB` folder contains the full KiCad project, including schematics
 | :--- | :--- | :--- |
 | **AG-RXB6 Receiver** | VCC | VIN (5V) |
 | **AG-RXB6 Receiver** | GND | GND Pin 1 (Dedicated) |
-| **AG-RXB6 Receiver** | DATA | Pin 26 |
+| **AG-RXB6 Receiver** | DATA | Pin 27 |
 | **OLED Display** | VCC | 3V3 Rail |
 | **OLED Display** | SDA | Pin 21 |
 | **OLED Display** | SCL | Pin 22 |
@@ -50,7 +50,7 @@ The `/Hardware/PCB` folder contains the full KiCad project, including schematics
 | **Joystick** | VRY | Pin 35 |
 | **Joystick** | SW | Pin 32 |
 | **Buzzer** | VCC | 3V3 Rail |
-| **Buzzer** | I/O | Pin 27 |
+| **Buzzer** | I/O | Pin 26 |
 
 | Component | Pin Connection | Receiver Pin |
 | :--- | :--- | :--- |
