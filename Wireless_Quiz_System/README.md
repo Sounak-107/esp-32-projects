@@ -28,6 +28,8 @@ This project is a low-latency, localized Machine-to-Machine (M2M) quiz buzzer sy
 ![5V USB power bank module](images/Power_bank.png)
 * 1x 18650 Li-ion Battery
 ![18650 Li-ion battery](images/Battery.png)
+* 0.1 micro Farrad Ceramic capacitors (quantity: as per need)
+![0.1 microF Ceramic Capacitor](images/Capacitor.png)
 
 ---
 
