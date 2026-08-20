@@ -2,7 +2,7 @@
 
 This project is a low-latency, localized Machine-to-Machine (M2M) quiz buzzer system. It supports up to 8 wireless teams using an ESP32 microcontroller and custom Python firmware to decode analog radio signals. The system features a custom noise-filtering protocol to stabilize RF data, separate game modes (Rapid Fire and Tie-Breaker), and an onboard I2C OLED interface.
 
-![Top down view of electronics on a breadboard workbench showing an ESP32 development board connected to a 433MHz RF receiver module, a 0.96 inch OLED display, an analog joystick module, and a buzzer arranged for a wireless quiz buzzer system](images/hero_image.jpg)
+![Top down view of electronics on a breadboard workbench showing an ESP32 development board connected to a 433MHz RF receiver module, a 0.96 inch OLED display, an analog joystick module, and a buzzer arranged for a wireless quiz buzzer system](images/Bread_Board_Prototype.jpg)
 
 ---
 
