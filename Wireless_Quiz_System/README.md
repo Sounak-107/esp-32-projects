@@ -73,6 +73,8 @@ The firmware is written in MicroPython. Because standard 433MHz modules are high
 
 The software captures raw microsecond pulses, identifies the 5000us sync pulse and bit-shifts the subsequent 24 pulses to separate the 20-bit remote ID from the 4-bit button ID.
 
+To prevent neighborhood RF noise (like car keys or garage door openers) from interrupting the quiz, the software acts as a strict gatekeeper. It cross-references incoming decoded IDs against a predefined dictionary in `button_configure.py`. If an unregistered ID is detected, the packet is instantly dropped before reaching the game logic, ensuring no phantom "Unknown Team" presses can occur.
+
 To prevent misfires caused by hardware interference, a redundancy noise filter requires the exact same ID to be read consecutively before triggering game logic:
 
 ```python
@@ -101,6 +103,9 @@ if match_count == 2:
 
 * **Logic Level Safety**
   The ESP32 uses strict 3.3V logic. During diagnostic testing, care was taken to route the 5V-powered RXB6 data output safely to the ESP32 GPIO pins, avoiding over-voltage damage to the microcontroller's internal logic gates.
+
+* **Stray RF Signal Rejection**
+  Standard 433MHz receivers pick up a massive amount of background noise and signals from unrelated devices. Initially, stray signals would pass through the decoder and display as "Unknown Team". This was resolved by implementing a strict whitelisting protocol; any decoded ID not explicitly registered in the configuration file triggers an immediate `continue` command, cleanly abandoning the loop and keeping the UI bug-free.
 
 ---
 

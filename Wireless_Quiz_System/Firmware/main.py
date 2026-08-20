@@ -208,6 +208,13 @@ while True:
                 
                 remote_id = raw_id >> 4
                 button_val = raw_id & 15
+                #bouncer (check if the remote is unregistered
+                if remote_id not in example_button_configure.teams :
+                    continue #instantly drop the signal and restart the loop
+                
+                #bouncer (check if the button pressed is unregistered)
+                if button_val not in example_button_configure.buttons :
+                    continue 
                 
                 #print("DEBUG - The Remote ID is:", remote_id, " | The Button is:", button_val)
                 
