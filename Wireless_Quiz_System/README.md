@@ -38,9 +38,9 @@ This project is a low-latency, localized Machine-to-Machine (M2M) quiz buzzer sy
 
   ![analog joystick module](images/Joystick.png)
 
-* 5V USB Power Bank Module
+* H961-U 1023HS Power Bank Module
 
-  ![5V USB power bank module](images/Power_bank.png)
+  ![H961-U 1023HS power bank module](images/Power_bank.png)
 
 * 1x 18650 Li-ion Battery
 
@@ -53,7 +53,7 @@ This project is a low-latency, localized Machine-to-Machine (M2M) quiz buzzer sy
 * 1x 18650 Battery In-Series Lithium Cell Holder Open Case with Wire
 
   ![18650 Battery In-Series Lithium Cell Holder Open Case with Wire](images/Holder.png)
-  
+
 ---
 
 ## Hardware Architecture & Wiring
